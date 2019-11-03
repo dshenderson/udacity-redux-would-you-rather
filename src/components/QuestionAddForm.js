@@ -44,7 +44,7 @@ class QuestionAddForm extends Component {
       ? <Redirect to="/"/>
       : <Fragment>
           <SubHeading>Add a new question</SubHeading>
-          <p>Would you rather [<Option>Option A</Option>] or [<Option>Option B</Option>]?</p>
+          <p>Would you rather [<Option>Option 1</Option>] or [<Option>Option 2</Option>]?</p>
           <form onSubmit={this.handleSubmit}>
             <Label htmlFor="option1">Option 1</Label>
             <TextField
