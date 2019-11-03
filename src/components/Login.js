@@ -27,7 +27,7 @@ class Login extends Component {
     if (redirectToReferrer) {
       return (
         <Redirect to={from}/>
-      )
+      );
     }
 
     return (

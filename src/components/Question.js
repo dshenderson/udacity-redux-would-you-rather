@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import {StyledLinkBack} from './FormElements';
 import QuestionContainer from './QuestionContainer';
 import QuestionAnswered from './QuestionAnswered';
@@ -9,6 +9,11 @@ import User from './User';
 
 class Question extends Component {
   render() {
+    if (this.props.redirect) {
+      return (
+        <Redirect to='/'/>
+      );
+    }
     const {
       author,
       isAnswered,
@@ -37,6 +42,10 @@ class Question extends Component {
 
 function mapStateToProps({authedUser, questions, users}, props) {
   const question = questions[props.match.params.id];
+
+  if (!question) {
+    return {redirect: true};
+  }
 
   return {
     author: users[question.author],
