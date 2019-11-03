@@ -36,15 +36,16 @@ class Home extends Component {
 
         <StyledTabPanel>
           <h2 className="sr-only">Unanswered questions</h2>
-          {unansweredQuestions.map(question => (
+          {unansweredQuestions.length ? unansweredQuestions.map(question => (
             <QuestionLink key={question.id} question={question} user={users[question.author]}/>
-          ))}
+          )) : <p>I felt a great disturbance in the Force, as if millions of questions suddenly cried out in terror and
+          were suddenly silenced...</p>}
         </StyledTabPanel>
         <StyledTabPanel>
           <h2 className="sr-only">Answered questions</h2>
-          {answeredQuestions.map(question => (
+          {answeredQuestions.length ? answeredQuestions.map(question => (
             <QuestionLink key={question.id} question={question} user={users[question.author]}/>
-          ))}
+          )) : <p>I find your lack of questions disturbing.</p>}
         </StyledTabPanel>
       </Tabs>
     );
