@@ -21,7 +21,7 @@ class Question extends Component {
     return (
       <QuestionContainer>
         {(isAnswered.opt1 || isAnswered.opt2)
-          ? <QuestionAnswered opt1={optionOne} opt2={optionTwo} answered={isAnswered.op1 ? 'opt1' : 'opt2'}/>
+          ? <QuestionAnswered opt1={optionOne} opt2={optionTwo} answered={isAnswered.opt1 ? 'opt1' : 'opt2'}/>
           : <QuestionUnanswered id={id}/>
         }
         <p>Asked by <User user={author}/></p>
