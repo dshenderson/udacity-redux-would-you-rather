@@ -1,8 +1,8 @@
 let users = {
-  sarahedo: {
-    id: 'sarahedo',
-    name: 'Sarah Edo',
-    avatarURL: ,
+  bobafett: {
+    id: 'bobafett',
+    name: 'Boba Fett',
+    avatarURL: '/avatars/bobafett.png',
     answers: {
       "8xf0y6ziyjabvozdd253nd": 'optionOne',
       "6ni6ok3ym7mf1p33lnez": 'optionTwo',
@@ -11,20 +11,31 @@ let users = {
     },
     questions: ['8xf0y6ziyjabvozdd253nd', 'am8ehyc8byjqgar0jgpub9']
   },
-  tylermcginnis: {
-    id: 'tylermcginnis',
-    name: 'Tyler McGinnis',
-    avatarURL: ,
+  c3po: {
+    id: 'c3po',
+    name: 'C3PO',
+    avatarURL: '/avatars/c3po.png',
     answers: {
       "vthrdm985a262al8qx3do": 'optionOne',
       "xj352vofupe1dqz9emx13r": 'optionTwo',
     },
     questions: ['loxhs1bqm25b708cmbf3g', 'vthrdm985a262al8qx3do'],
   },
-  johndoe: {
-    id: 'johndoe',
-    name: 'John Doe',
-    avatarURL: ,
+  chewbacca: {
+    id: 'chewbacca',
+    name: 'Chewbacca',
+    avatarURL: '/avatars/chewbacca.png',
+    answers: {
+      "xj352vofupe1dqz9emx13r": 'optionOne',
+      "vthrdm985a262al8qx3do": 'optionTwo',
+      "6ni6ok3ym7mf1p33lnez": 'optionTwo'
+    },
+    questions: ['6ni6ok3ym7mf1p33lnez', 'xj352vofupe1dqz9emx13r'],
+  },
+  darthvader: {
+    id: 'darthvader',
+    name: 'Darth Vader',
+    avatarURL: '/avatars/darthvader.png',
     answers: {
       "xj352vofupe1dqz9emx13r": 'optionOne',
       "vthrdm985a262al8qx3do": 'optionTwo',
@@ -37,80 +48,80 @@ let users = {
 let questions = {
   "8xf0y6ziyjabvozdd253nd": {
     id: '8xf0y6ziyjabvozdd253nd',
-    author: 'sarahedo',
+    author: 'bobafett',
     timestamp: 1467166872634,
     optionOne: {
-      votes: ['sarahedo'],
-      text: 'have horrible short term memory',
+      votes: ['bobafett'],
+      text: 'be frozen in carbon',
     },
     optionTwo: {
       votes: [],
-      text: 'have horrible long term memory'
+      text: 'be fed alive to a sarlacc'
     }
   },
   "6ni6ok3ym7mf1p33lnez": {
     id: '6ni6ok3ym7mf1p33lnez',
-    author: 'johndoe',
+    author: 'darthvader',
     timestamp: 1468479767190,
     optionOne: {
-      votes: [],
-      text: 'become a superhero',
+      votes: ['darthvader'],
+      text: 'join me so together we can rule the galaxy',
     },
     optionTwo: {
-      votes: ['johndoe', 'sarahedo'],
-      text: 'become a supervillain'
+      votes: ['c3po'],
+      text: 'lose your hand in a lightsaber duel'
     }
   },
   "am8ehyc8byjqgar0jgpub9": {
     id: 'am8ehyc8byjqgar0jgpub9',
-    author: 'sarahedo',
+    author: 'c3po',
     timestamp: 1488579767190,
     optionOne: {
       votes: [],
-      text: 'be telekinetic',
+      text: 'take one last look at your friends',
     },
     optionTwo: {
-      votes: ['sarahedo'],
-      text: 'be telepathic'
+      votes: ['c3po', 'chewbacca'],
+      text: 'let the Wookie win'
     }
   },
   "loxhs1bqm25b708cmbf3g": {
     id: 'loxhs1bqm25b708cmbf3g',
-    author: 'tylermcginnis',
+    author: 'chewbacca',
     timestamp: 1482579767190,
     optionOne: {
-      votes: [],
-      text: 'be a front-end developer',
+      votes: ['chewbacca'],
+      text: 'visit Kashyyyk (the Wookiee planet)',
     },
     optionTwo: {
-      votes: ['sarahedo'],
-      text: 'be a back-end developer'
+      votes: ['c3po'],
+      text: 'visit Endor (the Ewok moon)'
     }
   },
   "vthrdm985a262al8qx3do": {
     id: 'vthrdm985a262al8qx3do',
-    author: 'tylermcginnis',
+    author: 'chewbacca',
     timestamp: 1489579767190,
     optionOne: {
-      votes: ['tylermcginnis'],
-      text: 'find $50 yourself',
+      votes: ['chewbacca'],
+      text: 'pilot the Milennium Falcon',
     },
     optionTwo: {
-      votes: ['johndoe'],
-      text: 'have your best friend find $500'
+      votes: ['darthvader'],
+      text: 'command an Imperial Star Destroyer'
     }
   },
   "xj352vofupe1dqz9emx13r": {
     id: 'xj352vofupe1dqz9emx13r',
-    author: 'johndoe',
+    author: 'darthvader',
     timestamp: 1493579767190,
     optionOne: {
-      votes: ['johndoe'],
-      text: 'write JavaScript',
+      votes: ['darthvader'],
+      text: 'use a lightsaber',
     },
     optionTwo: {
-      votes: ['tylermcginnis'],
-      text: 'write Swift'
+      votes: ['chewbacca'],
+      text: 'use a blaster'
     }
   },
 }
