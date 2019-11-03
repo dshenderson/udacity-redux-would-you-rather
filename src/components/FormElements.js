@@ -15,12 +15,16 @@ export const Button = styled.button`
   transition-duration: 0.3s;
   transition-property: box-shadow, transform;
   color: #333;
-  cursor: pointer;
   &:hover,
   &:focus,
   &:active {
     box-shadow: 0 10px 10px -10px rgba(192, 192, 192, 192.5);
     transform: scale(1.1);
+  }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    transform: none;
   }
 `;
 

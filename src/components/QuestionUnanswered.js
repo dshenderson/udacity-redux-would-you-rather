@@ -49,7 +49,7 @@ class QuestionUnanswered extends Component {
           />
           {optionTwo.text}
         </RadioButtonLabel>
-        <Button>Submit your answer</Button>
+        <Button disabled={!this.state.value}>Submit your answer</Button>
       </form>
     );
   }

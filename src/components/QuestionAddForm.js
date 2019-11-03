@@ -62,7 +62,7 @@ class QuestionAddForm extends Component {
               placeholder="Enter the text for option 2"
               onChange={this.handleChange}
             />
-            <Button>Submit</Button>
+            <Button disabled={!this.state.option1 || !this.state.option2}>Submit</Button>
           </form>
         </Fragment>
     );
