@@ -28,6 +28,20 @@ export const Button = styled.button`
   }
 `;
 
+export const StyledLinkForward = styled(Button)`
+  &:after {
+    content: '⇨';
+    margin-left: 1rem;
+  }
+`;
+
+export const StyledLinkBack = styled(Button)`
+  &:before {
+    content: '⇐';
+    margin-right: 1rem;
+  }
+`;
+
 export const Label = styled.label`
   display: block;
   width: 32rem;

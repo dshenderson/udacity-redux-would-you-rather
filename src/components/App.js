@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import {
   BrowserRouter as Router,
   Route,
-  Redirect
+  Redirect,
+  Switch
 } from 'react-router-dom';
 import {connect} from 'react-redux';
 import {handleGetUsers} from '../actions/users';
@@ -17,6 +18,7 @@ import Question from './Question';
 import QuestionAddForm from './QuestionAddForm';
 import Leaderboard from './Leaderboard';
 import Login from './Login';
+import Error404 from './Error404';
 
 const ProtectedRoute = ({component: Component, isAuthenticated, ...rest}) => (
   <Route {...rest} render={props => (
@@ -64,11 +66,14 @@ class App extends Component {
             <Header/>
           )}
           <MainHeading>Would you rather...?</MainHeading>
-          <ProtectedRoute exact path='/' component={Home} isAuthenticated={isAuthenticated}/>
-          <ProtectedRoute path='/new' component={QuestionAddForm} isAuthenticated={isAuthenticated}/>
-          <ProtectedRoute path='/questions/:id' component={Question} isAuthenticated={isAuthenticated}/>
-          <ProtectedRoute path="/leaderboard" component={Leaderboard} isAuthenticated={isAuthenticated}/>
-          <Route path='/login' component={Login}/>
+          <Switch>
+            <ProtectedRoute exact path='/' component={Home} isAuthenticated={isAuthenticated}/>
+            <ProtectedRoute path='/new' component={QuestionAddForm} isAuthenticated={isAuthenticated}/>
+            <ProtectedRoute path='/questions/:id' component={Question} isAuthenticated={isAuthenticated}/>
+            <ProtectedRoute path="/leaderboard" component={Leaderboard} isAuthenticated={isAuthenticated}/>
+            <Route path='/login' component={Login}/>
+            <Route component={Error404}/>
+          </Switch>
         </AppWrapper>
       </Router>
     );

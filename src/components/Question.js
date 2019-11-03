@@ -1,19 +1,11 @@
 import React, {Component, Fragment} from 'react';
 import {connect} from 'react-redux';
-import styled from '@emotion/styled';
 import {Link} from 'react-router-dom';
-import {Button} from './FormElements';
+import {StyledLinkBack} from './FormElements';
 import QuestionContainer from './QuestionContainer';
 import QuestionAnswered from './QuestionAnswered';
 import QuestionUnanswered from './QuestionUnanswered';
 import User from './User';
-
-const StyledLink = styled(Button)`
-  &:before {
-    content: '⇐';
-    margin-right: 1rem;
-  }
-`;
 
 class Question extends Component {
   render() {
@@ -37,7 +29,7 @@ class Question extends Component {
           }
           <p>Asked by <User user={author}/></p>
         </QuestionContainer>
-        <StyledLink as={Link} to={'/'}>Go back</StyledLink>
+        <StyledLinkBack as={Link} to={'/'}>Go back</StyledLinkBack>
       </Fragment>
     );
   }
