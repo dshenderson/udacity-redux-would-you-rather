@@ -11,7 +11,7 @@ class Question extends Component {
   render() {
     if (this.props.redirect) {
       return (
-        <Redirect to='/'/>
+        <Redirect to='/errorpage'/>
       );
     }
     const {
