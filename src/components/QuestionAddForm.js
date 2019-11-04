@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from 'react';
-import {handleSaveQuestion} from '../actions/questions';
+import {handleSaveQuestion} from '../actions/shared';
 import {Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
 import styled from '@emotion/styled';

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {Button, Fieldset, RadioButton, RadioButtonLabel} from './FormElements';
-import {handleSaveQuestionAnswer} from '../actions/questions';
+import {handleSaveQuestionAnswer} from '../actions/shared';
 
 class QuestionUnanswered extends Component {
   state = {
