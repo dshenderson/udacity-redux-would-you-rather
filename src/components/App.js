@@ -68,7 +68,7 @@ class App extends Component {
           <MainHeading>Would you rather...?</MainHeading>
           <Switch>
             <ProtectedRoute exact path='/' component={Home} isAuthenticated={isAuthenticated}/>
-            <ProtectedRoute path='/new' component={QuestionAddForm} isAuthenticated={isAuthenticated}/>
+            <ProtectedRoute path='/add' component={QuestionAddForm} isAuthenticated={isAuthenticated}/>
             <ProtectedRoute path='/questions/:id' component={Question} isAuthenticated={isAuthenticated}/>
             <ProtectedRoute path="/leaderboard" component={Leaderboard} isAuthenticated={isAuthenticated}/>
             <Route path='/login' component={Login}/>

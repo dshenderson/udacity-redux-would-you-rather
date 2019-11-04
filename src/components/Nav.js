@@ -40,7 +40,7 @@ export default function Nav () {
         </NavLink>
       </NavItem>
       <NavItem>
-        <NavLink as={RRNavLink} to="/new" activeClassName="active">
+        <NavLink as={RRNavLink} to="/add" activeClassName="active">
           New Question
         </NavLink>
       </NavItem>
