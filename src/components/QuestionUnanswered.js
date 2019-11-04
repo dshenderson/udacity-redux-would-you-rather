@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Button, RadioButton, RadioButtonLabel} from './FormElements';
+import {Button, Fieldset, RadioButton, RadioButtonLabel} from './FormElements';
 import {handleSaveQuestionAnswer} from '../actions/questions';
 
 class QuestionUnanswered extends Component {
@@ -27,28 +27,31 @@ class QuestionUnanswered extends Component {
 
     return (
       <form onSubmit={this.handleSubmit}>
-        <RadioButtonLabel htmlFor="option1" className={this.state.value === 'option1' ? 'selected' : ''}>
-          <RadioButton
-            type="radio"
-            id="option1"
-            name="questionOptions"
-            value="optionOne"
-            checked={this.state.value === 'optionOne'}
-            onChange={this.handleChange}
-          />
-          {optionOne.text}
-        </RadioButtonLabel>
-        <RadioButtonLabel htmlFor="option2" className={this.state.value === 'option2' ? 'selected' : ''}>
-          <RadioButton
-            type="radio"
-            id="option2"
-            name="questionOptions"
-            value="optionTwo"
-            checked={this.state.value === 'optionTwo'}
-            onChange={this.handleChange}
-          />
-          {optionTwo.text}
-        </RadioButtonLabel>
+        <Fieldset>
+          <legend className="sr-only">Question options</legend>
+          <RadioButtonLabel htmlFor="option1" className={this.state.value === 'option1' ? 'selected' : ''}>
+            <RadioButton
+              type="radio"
+              id="option1"
+              name="questionOptions"
+              value="optionOne"
+              checked={this.state.value === 'optionOne'}
+              onChange={this.handleChange}
+            />
+            {optionOne.text}
+          </RadioButtonLabel>
+          <RadioButtonLabel htmlFor="option2" className={this.state.value === 'option2' ? 'selected' : ''}>
+            <RadioButton
+              type="radio"
+              id="option2"
+              name="questionOptions"
+              value="optionTwo"
+              checked={this.state.value === 'optionTwo'}
+              onChange={this.handleChange}
+            />
+            {optionTwo.text}
+          </RadioButtonLabel>
+        </Fieldset>
         <Button disabled={!this.state.value}>Submit your answer</Button>
       </form>
     );

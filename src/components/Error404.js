@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import {StyledLinkForward} from './FormElements';
 import {SubHeading} from './Headings';
 
-const Wrapper = styled.main`
+const Wrapper = styled.div`
   padding: 1rem 2rem;
 `;
 

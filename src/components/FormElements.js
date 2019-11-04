@@ -92,3 +92,9 @@ export const RadioButtonLabel = styled(Label)`
     border-color: deepskyblue;
   }
 `;
+
+export const Fieldset = styled.fieldset`
+  border: none;
+  margin: 0;
+  padding: 0;
+`;
