@@ -22,6 +22,15 @@ const Option = styled.li`
   }
 `;
 
+const Legend = styled.p`
+  &:before {
+    content: '✓';
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+`;
+
 const Stats = styled.span`
   &:before {
     content: '(';
@@ -50,6 +59,7 @@ export default function QuestionAnswered(props) {
         {opt2.text}
         <Stats>{votes2} of {votesTotes}, {perc2}%</Stats>
       </Option>
+      <Legend>You voted for {answered === 'opt1' ? `"${opt1.text}"` : `"${opt2.text}"`}</Legend>
     </VotesContainer>
   );
 }
