@@ -8,6 +8,9 @@ const Table = styled.table`
   width: 32rem;
   max-width: 100%;
   border-collapse: collapse;
+  @media (max-width: 414px) {
+    width: auto;
+  }
   & thead {
     border-bottom: 2px solid black;
     & tr:first-child th {
@@ -30,12 +33,18 @@ const Table = styled.table`
     vertical-align: bottom;
     font-weight: bold;
     padding: 0 1rem;
+    @media (max-width: 414px) {
+      padding: 0 0.25rem;
+    }
   }
   & td {
     text-align: center;
     padding: 0.5rem 1rem;
     border-left: 1px solid silver;
     border-top: 1px solid silver;
+    @media (max-width: 414px) {
+      padding: 0.5rem 0.25rem;
+    }
   }
 `;
 

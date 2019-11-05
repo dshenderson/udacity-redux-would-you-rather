@@ -97,4 +97,5 @@ export const Fieldset = styled.fieldset`
   border: none;
   margin: 0;
   padding: 0;
+  min-inline-size: auto;
 `;

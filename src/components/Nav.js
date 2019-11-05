@@ -12,6 +12,9 @@ const NavWrapper = styled.ul`
 const NavItem = styled.li`
   display: inline-block;
   margin-right: 2rem;
+  @media (max-width: 414px) {
+    margin-right: 1.5rem;
+  }
 `;
 
 const NavLink = styled.a`
